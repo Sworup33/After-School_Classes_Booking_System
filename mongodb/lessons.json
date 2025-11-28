@@ -1,0 +1,102 @@
+[
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8c9d"
+    },
+    "subject": "Mathematics",
+    "location": "Room 101",
+    "price": 25,
+    "spaces": 5,
+    "image": "/images/math.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8c9e"
+    },
+    "subject": "English",
+    "location": "Room 102",
+    "price": 20,
+    "spaces": 5,
+    "image": "/images/english.png"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8c9f"
+    },
+    "subject": "Science",
+    "location": "Lab 201",
+    "price": 30,
+    "spaces": 5,
+    "image": "/images/science.png"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca0"
+    },
+    "subject": "Art",
+    "location": "Studio A",
+    "price": 22,
+    "spaces": 5,
+    "image": "/images/art.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca1"
+    },
+    "subject": "Music",
+    "location": "Music Room",
+    "price": 28,
+    "spaces": 5,
+    "image": "/images/music.png"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca2"
+    },
+    "subject": "Sports",
+    "location": "Gym",
+    "price": 18,
+    "spaces": 5,
+    "image": "/images/sports.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca3"
+    },
+    "subject": "Drama",
+    "location": "Theater",
+    "price": 24,
+    "spaces": 5,
+    "image": "/images/drama.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca4"
+    },
+    "subject": "Coding",
+    "location": "Computer Lab",
+    "price": 35,
+    "spaces": 5,
+    "image": "/images/coding.png"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca5"
+    },
+    "subject": "French",
+    "location": "Room 103",
+    "price": 26,
+    "spaces": 5,
+    "image": "/images/french.jpg"
+  },
+  {
+    "_id": {
+      "$oid": "673f1a2b8c9d4e5f6a7b8ca6"
+    },
+    "subject": "Chess",
+    "location": "Room 104",
+    "price": 15,
+    "spaces": 5,
+    "image": "/images/chess.jpg"
+  }
+]

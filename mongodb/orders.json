@@ -1,0 +1,74 @@
+[
+  {
+    "_id": {
+      "$oid": "673f1b3c9d8e7f6a5b4c3d2e"
+    },
+    "name": "Alice Johnson",
+    "phone": "1234567890",
+    "lessons": [
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8c9d",
+        "subject": "Mathematics",
+        "price": 25
+      },
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8c9e",
+        "subject": "English",
+        "price": 20
+      }
+    ],
+    "totalPrice": 45,
+    "orderDate": {
+      "$date": "2025-11-21T10:30:00.000Z"
+    },
+    "status": "pending"
+  },
+  {
+    "_id": {
+      "$oid": "673f1b3c9d8e7f6a5b4c3d2f"
+    },
+    "name": "Bob Smith",
+    "phone": "9876543210",
+    "lessons": [
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8c9f",
+        "subject": "Science",
+        "price": 30
+      }
+    ],
+    "totalPrice": 30,
+    "orderDate": {
+      "$date": "2025-11-21T11:15:00.000Z"
+    },
+    "status": "completed"
+  },
+  {
+    "_id": {
+      "$oid": "673f1b3c9d8e7f6a5b4c3d30"
+    },
+    "name": "Carol Davis",
+    "phone": "5551234567",
+    "lessons": [
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8ca4",
+        "subject": "Coding",
+        "price": 35
+      },
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8ca1",
+        "subject": "Music",
+        "price": 28
+      },
+      {
+        "lessonId": "673f1a2b8c9d4e5f6a7b8ca0",
+        "subject": "Art",
+        "price": 22
+      }
+    ],
+    "totalPrice": 85,
+    "orderDate": {
+      "$date": "2025-11-21T14:45:00.000Z"
+    },
+    "status": "pending"
+  }
+]

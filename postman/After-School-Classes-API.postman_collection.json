@@ -1,0 +1,199 @@
+{
+  "info": {
+    "name": "After-School Classes Booking System API",
+    "description": "CST3144 Coursework - API Collection for testing all endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "12345678"
+  },
+  "item": [
+    {
+      "name": "Lessons",
+      "item": [
+        {
+          "name": "GET All Lessons",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/lessons",
+              "host": ["{{baseUrl}}"],
+              "path": ["lessons"]
+            },
+            "description": "Retrieve all available lessons from the database"
+          },
+          "response": []
+        },
+        {
+          "name": "GET Lesson by ID",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/lessons/673f1a2b8c9d4e5f6a7b8c9d",
+              "host": ["{{baseUrl}}"],
+              "path": ["lessons", "673f1a2b8c9d4e5f6a7b8c9d"]
+            },
+            "description": "Retrieve a specific lesson by its MongoDB ObjectId"
+          },
+          "response": []
+        },
+        {
+          "name": "PUT Update Lesson Spaces",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"spaces\": 3\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/lessons/673f1a2b8c9d4e5f6a7b8c9d",
+              "host": ["{{baseUrl}}"],
+              "path": ["lessons", "673f1a2b8c9d4e5f6a7b8c9d"]
+            },
+            "description": "Update the available spaces for a specific lesson. Can update to any number."
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "POST Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\": \"John Doe\",\n  \"phone\": \"1234567890\",\n  \"lessons\": [\n    {\n      \"lessonId\": \"673f1a2b8c9d4e5f6a7b8c9d\",\n      \"subject\": \"Mathematics\",\n      \"price\": 25\n    },\n    {\n      \"lessonId\": \"673f1a2b8c9d4e5f6a7b8c9e\",\n      \"subject\": \"English\",\n      \"price\": 20\n    }\n  ],\n  \"totalPrice\": 45\n}"
+            },
+            "url": {
+              "raw": "{{baseUrl}}/order",
+              "host": ["{{baseUrl}}"],
+              "path": ["order"]
+            },
+            "description": "Create a new order with customer details and selected lessons. Name must contain only letters, phone must contain only digits."
+          },
+          "response": []
+        },
+        {
+          "name": "GET All Orders",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/orders",
+              "host": ["{{baseUrl}}"],
+              "path": ["orders"]
+            },
+            "description": "Retrieve all orders from the database (bonus endpoint)"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Search",
+      "item": [
+        {
+          "name": "GET Search Lessons",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/search?query=math",
+              "host": ["{{baseUrl}}"],
+              "path": ["search"],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "math",
+                  "description": "Search term for subject or location"
+                }
+              ]
+            },
+            "description": "Search for lessons by subject or location (optional endpoint)"
+          },
+          "response": []
+        },
+        {
+          "name": "GET Search by Location",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/search?query=room",
+              "host": ["{{baseUrl}}"],
+              "path": ["search"],
+              "query": [
+                {
+                  "key": "query",
+                  "value": "room"
+                }
+              ]
+            },
+            "description": "Search lessons by location keyword"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Static Files",
+      "item": [
+        {
+          "name": "GET Lesson Image",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/images/math.jpg",
+              "host": ["{{baseUrl}}"],
+              "path": ["images", "math.jpg"]
+            },
+            "description": "Access static image files served by the backend"
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "item": [
+        {
+          "name": "GET Root Endpoint",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/",
+              "host": ["{{baseUrl}}"],
+              "path": [""]
+            },
+            "description": "Check if the API is running and get available endpoints"
+          },
+          "response": []
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ]
+}
