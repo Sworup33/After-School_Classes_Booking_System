@@ -1,9 +1,15 @@
+require('dotenv').config();
 const { MongoClient } = require('mongodb');
 const fs = require('fs');
 const path = require('path');
 
-const uri = 'mongodb+srv://subedisworup23_db_user:Gsas%402025hub@cluster0.j7zvbeo.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-const dbName = 'afterschool';
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.DB_NAME || 'afterschool';
+
+if (!uri) {
+    console.error('Missing MONGODB_URI in environment. Please set it in .env');
+    process.exit(1);
+}
 
 async function importData() {
     const client = new MongoClient(uri);
