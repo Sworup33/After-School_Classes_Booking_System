@@ -34,7 +34,7 @@ PORT=3000
 
 Import data to MongoDB:
 ```bash
-node import-data.js
+npm run seed
 ```
 
 Start backend:
