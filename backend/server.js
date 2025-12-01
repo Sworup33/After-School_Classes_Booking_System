@@ -82,6 +82,11 @@ app.get('/', (req, res) => {
     });
 });
 
+// Simple health check
+app.get('/health', (req, res) => {
+    res.json({ status: 'ok', timestamp: new Date().toISOString() });
+});
+
 // GET /lessons - Get all lessons
 app.get('/lessons', async (req, res) => {
     try {
