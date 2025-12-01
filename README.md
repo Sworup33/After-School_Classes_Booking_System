@@ -15,7 +15,7 @@ A complete full-stack booking system for after-school classes built with Vue.js,
 
 ### 1. Clone Repository
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/Sworup33/After-School_Classes_Booking_System.git
 cd After-School_Classes_Booking_System
 ```
 
